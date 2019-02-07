@@ -54,12 +54,11 @@ def home(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/index.html',
-        context_instance = RequestContext(request,
+        'index.html',
         {
             'title':'Jaegun Jung, Ph. D. - Home',
             'year':datetime.now().year,
-        })
+        }
     )
 
 def figures(request):
@@ -68,11 +67,10 @@ def figures(request):
     return render(
         request,
         'app/figures.html',
-        context_instance = RequestContext(request,
         {
             'title':'Sample plots',
             'year':datetime.now().year,
-        })
+        }
     )
 
 def papers(request):
@@ -81,12 +79,11 @@ def papers(request):
     return render(
         request,
         'app/papers.html',
-        context_instance = RequestContext(request,
         {
             'title':'Papers and Presentations',
             'message':'As of 2/23/2015',
             'year':datetime.now().year,
-        })
+        }
     )
 
 def contact(request):
@@ -95,10 +92,9 @@ def contact(request):
     return render(
         request,
         'app/contact.html',
-        context_instance = RequestContext(request,
         {
             'title':'About Jaegun',
             'message':'He is ...',
             'year':datetime.now().year,
-        })
+        }
     )
