@@ -1,0 +1,156 @@
+{% extends "app/layout.html" %}
+
+{% load staticfiles %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'app/content/slideshow.css' %}">
+<script src="{% static 'app/scripts/slideshow-jq.js' %}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+
+<div id="1-slideshow" class="wslide">
+    <table class="wslide-main">
+        <tbody>
+        <tr>
+            <td>
+                <div class="wslide-content disable-user-select" style="height: 600px;">
+                    <div class="wslide-content-inner">
+                        <div class="wslide-slides">
+                            <div class="wslide-slide">
+                                <div class="wslide-slide-inner1">
+                                    <div class="wslide-slide-inner2" style="width: 882px; left: -441px; top: -284px;">
+                                        <img src="{% static 'app/content2/scatter_orig.png' %}" style="width: 882px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wslide-slide" style="display: none;">
+                                <div class="wslide-slide-inner1">
+                                    <div class="wslide-slide-inner2" style="width: 837px; left: -419px; top: -279px;">
+                                        <img src="{% static 'app/content2/O3map_orig.png' %}" style="width: 837px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wslide-slide" style="display: none;">
+                                <div class="wslide-slide-inner1">
+                                    <div class="wslide-slide-inner2" style="width: 750px; left: -375px; top: -280px;">
+                                        <img src="{% static 'app/content2/statmap_orig.png' %}" style="width: 750px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wslide-slide" style="display: none;">
+                                <div class="wslide-slide-inner1">
+                                    <div class="wslide-slide-inner2" style="width: 751px; left: -376px; top: -301px;">
+                                        <img src="{% static 'app/content2/whisker_orig.png' %}" style="width: 751px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wslide-overlay-top-left disable-user-select">
+                        <div class="wslide-button-wrap" style="display: none;">
+                            <span class="wslide-play wslide-button disable-user-select" style="opacity: 1;">
+                                <span class="wslide-button-inner">Play
+                                    <span class="wslide-button-icon"></span>
+                                </span>
+                                <span class="wslide-button-bg"></span>
+                            </span>
+                        </div>
+                        <div class="wslide-button-wrap" style="display: none;">
+                            <span class="wslide-pause wslide-button disable-user-select"
+                                  style="opacity: 0; display: none;">
+                                <span class="wslide-button-inner">Pause
+                                    <span class="wslide-button-icon"></span>
+                                </span>
+                                <span class="wslide-button-bg"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="wslide-overlay-top-right disable-user-select">
+                        <div class="wslide-button-wrap" style="display: none;">
+                            <span class="wslide-prev wslide-button disable-user-select">
+                                <span class="wslide-button-inner">
+                                    <span class="wslide-button-icon"></span>
+                                </span>
+                                <span class="wslide-button-bg"></span>
+                            </span>
+                        </div>&nbsp;
+                        <div class="wslide-button-wrap" style="display: none;">
+                            <span class="wslide-next wslide-button disable-user-select">
+                                <span class="wslide-button-inner">
+                                    <span class="wslide-button-icon"></span>
+                                </span><span class="wslide-button-bg"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="wslide-overlay-left disable-user-select"></div>
+                    <div class="wslide-overlay-right disable-user-select"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="wslide-link-cell" style="width: auto;">
+                <div class="wslide-links disable-user-select wslide-links-bottom wslide-thumbnail-links"
+                     style="height: 75px;">
+                    <div class="wslide-links-inner">
+                        <table>
+                            <tbody>
+                            <tr>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="text/javascript">
+(function(jQuery) {
+    function init() {
+        wSlideshow.render({
+        elementID:"1",
+        nav:"thumbnails",
+        navLocation:"bottom",
+        captionLocation:"bottom",
+        transition:"fade",
+        autoplay:"0",
+        speed:"5",
+        aspectRatio:"auto",
+        showControls:"true",
+        randomStart:"false",
+        images:[
+            {"url":"static/app/images/scatter.png",
+            "width":"333",
+            "height":"214",
+            "caption":"Created by MS Excel." +
+            " X and Y axes are set automatically by their range by embedded macro." +
+            " Here ozone measured by aircraft are compared to CAMx (regional 3D chemical transport model) outputs." +
+            " The location of aircraft is calculated to the 3D model specific grids." +
+            " Statistics shown are calculated by perl scripts."},
+            {"url":"static/app/images/O3map.png",
+            "width":"333","height":"222",
+            "caption":"The 4th highest daily 8-hour O3 max predicted by CAMx." +
+            " NCL is used to create this contour plots."},
+            {"url":"static/app/images/statmap.png",
+            "width":"333",
+            "height":"248",
+            "caption":"Correlation Coefficient of O3 between Model and Observation." +
+            " Created with NCL (spatial map) and R (calculation of R)."},
+            {"url":"static/app/images/whisker.png",
+            "width":"312",
+            "height":"250",
+            "caption":"Box and whisker plots created using a R script." +
+            " Observed and Predicted ozone are plotted."}
+            ]
+        })
+    }
+    jQuery ? jQuery(init) : document.observe('dom:loaded', init)
+})(window._W && _W.jQuery)
+
+
+
+</script>
+{% endblock %}

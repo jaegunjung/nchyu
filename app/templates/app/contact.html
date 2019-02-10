@@ -1,0 +1,100 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="paragraph" style="text-align:left;">
+    <ul>
+        <li>LinkedIn:
+            <a href="https://www.linkedin.com/in/jgjung" target="_blank">
+                www.linkedin.com/in/jgjung</a>
+        </li>
+        <li>Github:
+            <a href="https://github.com/jaegunjung" target="_blank">
+                github.com/jaegunjung
+            </a>
+        </li>
+        <li>Facebook:
+            <a href="https://www.facebook.com/jaegun.jung.7" target="_blank">
+                www.facebook.com/jaegun.jung.7</a>
+        </li>
+    </ul>
+</div>
+<div>
+    <form enctype="multipart/form-data" action="https://formspree.io/jjg0412@gmail.com"
+          method="POST" id="form-messages">
+        <div id="messages-form-parent" class="wsite-form-container" style="margin-top:10px;">
+            <ul class="formlist" id="messages-form-list">
+                <h2 style="text-align:left;">Contact me!</h2>
+                <div>
+                    <div class="wsite-form-field wsite-name-field" style="margin:5px 0px 5px 0px;">
+                        <label class="wsite-form-label" for="input-firstName">Name
+                            <span class="form-required">*</span>
+                        </label>
+                        <div style="clear:both;"></div>
+                        <div class="wsite-form-input-container wsite-form-left wsite-form-input-first-name">
+                            <input id="input-firstName" class="wsite-form-input wsite-input" type="text"
+                                   name="First Name">
+                            <label class="wsite-form-sublabel" for="input-firstName">First</label>
+                        </div>
+                        <div class="wsite-form-input-container wsite-form-right wsite-form-input-last-name">
+                            <input id="input-lastName" class="wsite-form-input wsite-input" type="text"
+                                   name="Last Name">
+                            <label class="wsite-form-sublabel" for="input-lastName">Last</label>
+                        </div>
+                        <div id="instructions-name" class="wsite-form-instructions"
+                             style="display:none;"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+
+                <div>
+                    <div class="wsite-form-field" style="margin:5px 0px 5px 0px;">
+                        <label class="wsite-form-label" for="input-email">Email
+                            <span class="form-required">*</span>
+                        </label>
+                        <div class="wsite-form-input-container">
+                            <input id="input-email"
+                                   class="wsite-form-input wsite-input wsite-input-width-370px" type="text"
+                                   name="Email">
+                        </div>
+                        <div id="instructions-email" class="wsite-form-instructions"
+                             style="display:none;"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="wsite-form-field" style="margin:5px 0px 5px 0px;">
+                        <label class="wsite-form-label" for="input-comment">Comment
+                            <span class="form-required">*</span>
+                        </label>
+                        <div class="wsite-form-input-container">
+                    <textarea id="input-comment" class="wsite-form-input wsite-input wsite-input-width-370px"
+                              name="Comment" style="height: 200px"></textarea>
+                        </div>
+                        <div id="instructions-comment" class="wsite-form-instructions"
+                             style="display:none;"></div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div style="display:none; visibility:hidden;">
+            <input type="text" name="wsite_subject">
+        </div>
+        <div style="text-align:left; margin-top:10px; margin-bottom:10px;">
+            <input type="hidden" name="form_version" value="2">
+            <input type="hidden" name="wsite_approved" id="wsite-approved" value="weebly">
+            <input type="hidden" name="ucfid" value="messages">
+            <input type="submit" style="position:absolute;top:0;left:-9999px;width:1px;height:1px">
+            <button type="button" onclick="document.getElementById(&#39;form-messages&#39;).submit()">Submit</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+{% block scripts %}
+<script>
+var STATIC_BASE = 'https://formspree.io/';
+
+
+</script>
+{% endblock %}

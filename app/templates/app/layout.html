@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <title>{{ title }}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/sites.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/fancybox.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/main_style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/font_face.css' %}">
+    <script src="{% static 'app/scripts/jquery.min.js' %}"></script>
+    <script src="{% static 'app/scripts/main.js' %}"></script>
+    {% block extrahead %}{% endblock %}
+</head>
+
+<body class="wsite-theme-light no-header-page wsite-page-index">
+<div id="header-wrap">
+    <div id="page">
+        <div id="header-container">
+            <table id="header">
+                <tbody>
+                <tr>
+                    <td id="logo">
+                            <span class="wsite-logo">
+                                <a href="/">
+                                    <span id="wsite-title">Jaegun Jung, Ph. D.
+                                    </span>
+                                </a>
+                            </span>
+                    </td>
+                    <td id="header-right">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td class="phone-number">
+                                        <span class="wsite-text">Email jjg0412 at gmail dot com
+                                        </span>
+                                </td>
+                                <td class="social"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="search"></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="topnav">
+                <ul class="wsite-menu-default">
+                    <li class="wsite-nav-0" style="position: relative;">
+                        <a href="/" style="position: relative;">Home</a>
+                    </li>
+                    <li class="wsite-nav-1" style="position: relative;">
+                        <a href="/figures.html" style="position: relative;">Works done</a>
+                    </li>
+                    <li class="wsite-nav-2" style="position: relative;">
+                        <a href="/papers.html" style="position: relative;">PUBLICATIONS &amp; PRESENTATIONS</a>
+                    </li>
+                    <li class="wsite-nav-3" style="position: relative;">
+                        <a href="/contact.html" style="position: relative;">Personal Links</a>
+                    </li>
+                </ul>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="banner-wrap">
+    <div id="container">
+        <div class="wsite-header"></div>
+    </div>
+</div>
+<div id="main-wrap">
+    <div id="page">
+        <div id="main">
+            <div id="content">
+                <div id="wsite-content" class="wsite-elements wsite-not-footer">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% block scripts %}{% endblock %}
+</div>
+</body>
+</html>
