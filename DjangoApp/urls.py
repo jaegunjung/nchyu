@@ -20,7 +20,7 @@ urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^figures', figures, name='figures'),
     url(r'^contact', contact, name='contact'),
-    url(r'^papers', papers, name='papers'),
+    url(r'^events', events, name='events'),
     url(r'^login/$', login, {
             'template_name': 'app/login.html',
             'authentication_form': BootstrapAuthenticationForm,

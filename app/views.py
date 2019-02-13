@@ -57,7 +57,7 @@ def home(request):
         'app/index.html',
         context_instance = RequestContext(request,
         {
-            'title':'Jaegun Jung, Ph. D. - Home',
+            'title':'NCHYU - Home',
             'year':datetime.now().year,
         })
     )
@@ -70,21 +70,21 @@ def figures(request):
         'app/figures.html',
         context_instance = RequestContext(request,
         {
-            'title':'Sample plots',
+            'title':'NCHYU - Pictures',
             'year':datetime.now().year,
         })
     )
 
-def papers(request):
+def events(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/papers.html',
+        'app/events.html',
         context_instance = RequestContext(request,
         {
-            'title':'Papers and Presentations',
-            'message':'As of 2/23/2015',
+            'title':'NCHYU - Events',
+            'message':'As of 2/12/2019',
             'year':datetime.now().year,
         })
     )
@@ -97,8 +97,7 @@ def contact(request):
         'app/contact.html',
         context_instance = RequestContext(request,
         {
-            'title':'About Jaegun',
-            'message':'He is ...',
+            'title':'NCHYU - Join',
             'year':datetime.now().year,
         })
     )
