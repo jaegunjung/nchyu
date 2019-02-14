@@ -57,7 +57,7 @@ def home(request):
         'app/index.html',
         context_instance = RequestContext(request,
         {
-            'title':'NCHYU - Home',
+            'title':'북가주 한양 대학교 동문회 - Home',
             'year':datetime.now().year,
         })
     )
@@ -70,7 +70,7 @@ def figures(request):
         'app/figures.html',
         context_instance = RequestContext(request,
         {
-            'title':'NCHYU - Pictures',
+            'title':'북가주 한양 대학교 동문회 - Pictures',
             'year':datetime.now().year,
         })
     )
@@ -83,7 +83,7 @@ def events(request):
         'app/events.html',
         context_instance = RequestContext(request,
         {
-            'title':'NCHYU - Events',
+            'title':'북가주 한양 대학교 동문회 - Events',
             'message':'As of 2/12/2019',
             'year':datetime.now().year,
         })
@@ -97,7 +97,7 @@ def contact(request):
         'app/contact.html',
         context_instance = RequestContext(request,
         {
-            'title':'NCHYU - Join',
+            'title':'북가주 한양 대학교 동문회 - Join',
             'year':datetime.now().year,
         })
     )
