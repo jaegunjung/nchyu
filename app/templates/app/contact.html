@@ -1,30 +1,24 @@
 {% extends "app/layout.html" %}
 
 {% block content %}
+<head>
+    <title> 북가주 한양 대학교 동문회 - Join </title>
+</head>
 
 <div class="paragraph" style="text-align:left;">
-    <ul>
-        <li>LinkedIn:
-            <a href="https://www.linkedin.com/in/jgjung" target="_blank">
-                www.linkedin.com/in/jgjung</a>
-        </li>
-        <li>Github:
-            <a href="https://github.com/jaegunjung" target="_blank">
-                github.com/jaegunjung
-            </a>
-        </li>
-        <li>Facebook:
-            <a href="https://www.facebook.com/jaegun.jung.7" target="_blank">
-                www.facebook.com/jaegun.jung.7</a>
-        </li>
-    </ul>
+    <strong>
+    북가주 한양대 동문회는 카카오톡과 이메일로 연락을 주고 받습니다. <br>
+    동문회에 관해 더 자세히 알고 싶으시면 동문 임원에게 아래에 정보를 <br>
+    기재한후 Submit 버튼을 클릭해 주시기 바랍니다. <br>
+    최대한 빨리 연락 드리겠습니다. 감사합니다. <br><br>
+    </strong>
 </div>
 <div>
     <form enctype="multipart/form-data" action="https://formspree.io/jjg0412@gmail.com"
           method="POST" id="form-messages">
         <div id="messages-form-parent" class="wsite-form-container" style="margin-top:10px;">
             <ul class="formlist" id="messages-form-list">
-                <h2 style="text-align:left;">Contact me!</h2>
+                <h2 style="text-align:left;">동문회 가입 신청</h2>
                 <div>
                     <div class="wsite-form-field wsite-name-field" style="margin:5px 0px 5px 0px;">
                         <label class="wsite-form-label" for="input-firstName">Name
@@ -64,7 +58,7 @@
 
                 <div>
                     <div class="wsite-form-field" style="margin:5px 0px 5px 0px;">
-                        <label class="wsite-form-label" for="input-comment">Comment
+                        <label class="wsite-form-label" for="input-comment">Comment (학번, 학과, 사는 지역 등)
                             <span class="form-required">*</span>
                         </label>
                         <div class="wsite-form-input-container">
@@ -89,7 +83,18 @@
         </div>
     </form>
 </div>
-
+<div class="paragraph" style="text-align:left;"> 2012년 이전 활동 링크
+    <ul>
+        <li>Facebook:
+            <a href="https://www.facebook.com/groups/386950631366870/" target="_blank">
+                www.facebook.com/groups/386950631366870/</a>
+        </li>
+        <li>Facebook:
+            <a href="https://www.facebook.com/bay.hanyang" target="_blank">
+                www.facebook.com/bay.hanyang</a>
+        </li>
+    </ul>
+</div>
 {% endblock %}
 {% block scripts %}
 <script>
