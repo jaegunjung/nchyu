@@ -1,31 +1,6 @@
 {% extends "app/layout.html" %}
 
 {% block extrahead %}
-<script type="text/javascript">
-(function(jQuery){
-    function initFlyouts(){
-        initPublishedFlyoutMenus([
-            {"id":"638078592807400547","title":"Home","url":"index.html","target":""},
-            {"id":"379943252612927371","title":"Works done","url":"figures.html","target":""},
-            {"id":"951529784407562437","title":"PUBLICATIONS & PRESENTATIONS","url":"papers.html","target":""},
-            {"id":"165258903452855671","title":"Personal Links","url":"contact.html","target":""}
-            ],
-            '951529784407562437',
-            "<li class='wsite-nav-more'><a href='#'>more...<\/a><\/li>",
-            'active',
-            false
-        )
-    }
-    if (jQuery) {
-        if (jQuery.browser.msie && !window.flyoutMenusRefreshable) window.onload = initFlyouts;
-        else jQuery(initFlyouts);
-    }else{
-        if (Prototype.Browser.IE) window.onload = initFlyouts;
-        else document.observe('dom:loaded', initFlyouts);
-    }
-})(window._W && _W.jQuery)
-
-</script>
 {% endblock %}
 
 {% block content %}
@@ -33,32 +8,8 @@
     <title> 북가주 한양 대학교 동문회 - Events </title>
 </head>
 
-<font size="4">
-    <strong>
-      <font size="6">
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 2019년 동문회 일정
-      </font>
-            <ul style="padding-left: 120px !important;">
-                <br>
-                <li> 1/18   멘토단 신년모임 </li>
-                <li> 2/22   1차 정기 이사회 </li>
-                <br>
-                <li> 4/25   (예정) 동문에게 듣는다 - 전준희 (90 수학) </li>
-                <li> 5/4    (예정) 춘계 동문 가족산행 - 기념품, 케이터링, 가족 게임 </li>
-                <li> 5/25   (예정) 총장배 춘계 골피대회 - Wente Vineyards in Livermore </li>
-                <li> 6월초  (예정) 동문 야유회 (살구 pick) - 조한수 동문 과수원, BBQ 점심, 효소만들기, 게임 </li>
-                <br>
-                <li> 8월    (예정) 신임총장 방문 및 멘토단 위촉식 </li>
-                <li> 8-10월 (예정) 한양에세이 - 권성윤, 구호순, 이재홍 동문 </li>
-                <li> 9/21   (예정) 추계 골피대회 </li>
-                <br>
-                <li> 10/5   (예정) 추계 동문 가족산행 - 기념품, 피크닉 </li>
-                <li> 11/8   (예정) 2차 정기 이사회 </li>
-                <li> 11월   (예정) 감따기 행사 - Watsonville </li>
-                <li> 12월   (예정) 송년회 </li>
-            </ul>
-    </strong>
-</font>
+{% load staticfiles %}
+<embed src="{% static 'app/images/HYU_EVENTS.pdf' %}" type="application/pdf" width="1000px" height="650px"/>
 
 
 {% endblock %}

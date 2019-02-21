@@ -1,0 +1,15 @@
+{% extends "app/layout.html" %}
+
+{% block extrahead %}
+{% endblock %}
+
+{% block content %}
+<head>
+    <title> 북가주 한양 대학교 동문회 - Organization </title>
+</head>
+
+{% load staticfiles %}
+<embed src="{% static 'app/images/HYU_ORGANIZATION.pdf' %}" type="application/pdf" width="1000px" height="1180px"/>
+
+
+{% endblock %}

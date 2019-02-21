@@ -61,6 +61,18 @@ def home(request):
         })
     )
 
+def organization(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/organization.html',
+        context_instance = RequestContext(request,
+        {
+            'year':datetime.now().year,
+        })
+    )
+
 def figures(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)

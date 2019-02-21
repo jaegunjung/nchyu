@@ -18,6 +18,7 @@ urlpatterns = [
     # Examples:
      
     url(r'^$', home, name='home'),
+    url(r'^organization', organization, name='organization'),
     url(r'^figures', figures, name='figures'),
     url(r'^contact', contact, name='contact'),
     url(r'^events', events, name='events'),
