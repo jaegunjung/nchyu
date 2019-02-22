@@ -5,7 +5,7 @@
 
 {% block content %}
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport">
     <style>
         * {box-sizing: border-box}
         body {font-family: Verdana, sans-serif; margin:0}
@@ -84,8 +84,8 @@
 
         /* Fading animation */
         .fade {
-          -webkit-animation-name: fade;
-          -webkit-animation-duration: 1.5s;
+           -webkit-animation-name: fade;
+           -webkit-animation-duration: 1.5s;
           animation-name: fade;
           animation-duration: 1.5s;
         }
@@ -117,14 +117,14 @@
       <div class="text"></div>
     </div>
 
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 2</div>
-      <img src="{% static 'app/images/HYU_ORGANIZATION2.png' %}" style="width:100%">
-      <div class="text"></div>
-    </div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 2</div>
+  <img src="{% static 'app/images/HYU_ORGANIZATION2.png' %}" style="width:100%">
+  <div class="text"></div>
+</div>
 
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 </div>
 <br>
