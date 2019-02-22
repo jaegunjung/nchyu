@@ -108,3 +108,15 @@ def contact(request):
             'year':datetime.now().year,
         })
     )
+
+def googled6ad0f10bcbda8f2(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/googled6ad0f10bcbda8f2.html',
+        context_instance = RequestContext(request,
+        {
+            'year':datetime.now().year,
+        })
+    )
