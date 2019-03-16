@@ -85,6 +85,18 @@ def figures(request):
         })
     )
 
+def g_photos(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/g_photos.html',
+        context_instance = RequestContext(request,
+        {
+            'year':datetime.now().year,
+        })
+    )
+
 def events(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)

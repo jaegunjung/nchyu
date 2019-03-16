@@ -1,0 +1,78 @@
+{% extends "app/layout.html" %}
+
+{% load staticfiles %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'app/content/slideshow.css' %}">
+<script src="{% static 'app/scripts/slideshow-jq.js' %}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+<head>
+    <title> 북가주 한양 대학교 동문회 - Photo Lib </title>
+</head>
+
+<div id="1-slideshow" class="wslide">
+    <table class="wslide-main">
+        <tbody>
+        <tr>
+            <td>
+                <div class="wslide-content disable-user-select" style="height: 600px;">
+                    <div class="wslide-content-inner">
+                        <div class="wslide-slides">
+                            <div class="wslide-slide">
+                                <div class="wslide-slide-inner1">
+                                    <div class="wslide-slide-inner2" style="width: 882px; left: -441px; top: -284px;">
+                                        <iframe
+                                                src="https://drive.google.com/embeddedfolderview?id=1tTmU7n9bFmUHK-fZ8F9BBN8HfIF9lqtV#grid"
+                                                style="width: 882px; height: 500px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="wslide-overlay-top-left disable-user-select">-->
+                        <!--<div class="wslide-button-wrap" style="display: none;">-->
+                            <!--<span class="wslide-play wslide-button disable-user-select" style="opacity: 1;">-->
+                                <!--<span class="wslide-button-inner">Play-->
+                                    <!--<span class="wslide-button-icon"></span>-->
+                                <!--</span>-->
+                                <!--<span class="wslide-button-bg"></span>-->
+                            <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="wslide-overlay-top-right disable-user-select">-->
+                        <!--<div class="wslide-button-wrap" style="display: none;">-->
+                            <!--<span class="wslide-prev wslide-button disable-user-select">-->
+                                <!--<span class="wslide-button-inner">-->
+                                    <!--<span class="wslide-button-icon"></span>-->
+                                <!--</span>-->
+                                <!--<span class="wslide-button-bg"></span>-->
+                            <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="wslide-overlay-left disable-user-select"></div>-->
+                    <!--<div class="wslide-overlay-right disable-user-select"></div>-->
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <!--<td class="wslide-link-cell" style="width: auto;">-->
+                <!--<div class="wslide-links disable-user-select wslide-links-bottom wslide-thumbnail-links"-->
+                     <!--style="height: 75px;">-->
+                    <!--<div class="wslide-links-inner">-->
+                        <!--<table>-->
+                            <!--<tbody>-->
+                            <!--<tr>-->
+                            <!--</tr>-->
+                            <!--</tbody>-->
+                        <!--</table>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+{% block scripts %}
+{% endblock %}
