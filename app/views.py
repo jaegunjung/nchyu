@@ -97,6 +97,18 @@ def g_photos(request):
         })
     )
 
+def g_videos(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/g_videos.html',
+        context_instance = RequestContext(request,
+        {
+            'year':datetime.now().year,
+        })
+    )
+
 def events(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)

@@ -1,0 +1,31 @@
+{% extends "app/layout.html" %}
+
+{% load staticfiles %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'app/content/slideshow.css' %}">
+<script src="{% static 'app/scripts/slideshow-jq.js' %}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+<head>
+    <title> 북가주 한양 대학교 동문회 - Video Lib </title>
+</head>
+
+<iframe width="855" height="481" src="https://www.youtube.com/embed/9Gujv_mwhOc" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+<br><br><br>
+<iframe width="872" height="491" src="https://www.youtube.com/embed/siAk5HEwd28" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+<br><br><br>
+<iframe width="855" height="481" src="https://www.youtube.com/embed/li0dXJLve2g" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+{% endblock %}
+{% block scripts %}
+{% endblock %}
