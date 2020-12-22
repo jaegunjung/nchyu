@@ -13,6 +13,9 @@ from django.http import Http404
 from django.template import Template, Context
 from django.template.loader_tags import BlockNode
 from django.utils._os import safe_join
+from django.views.generic import ListView, DetailView
+from .models import Post
+
 
 def get_page_or_404(name):
     """Return page content as a Django template or raise 404 error."""
@@ -44,9 +47,9 @@ def page(request, slug='index'):
         'page': page,
     }
     if page._meta is not None:
-    	meta = page._meta.render(Context())
-    	extra_context = json.loads(meta)
-    	context.update(extra_context)
+        meta = page._meta.render(Context())
+        extra_context = json.loads(meta)
+        context.update(extra_context)
     return render(request, 'page.html', context)
 
 def home(request):
@@ -144,3 +147,11 @@ def googled6ad0f10bcbda8f2(request):
             'year':datetime.now().year,
         })
     )
+"""
+def post_list(request):
+    return render(request, 'app/post_list.html')
+"""
+
+post_list = ListView.as_view(model=Post)
+
+post_detail = DetailView.as_view(model=Post)

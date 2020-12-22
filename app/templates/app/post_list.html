@@ -1,0 +1,22 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<title>Blog</title>
+<div class = "container">
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-hover table-bordered">
+            {% for post in post_list %}
+                <tr>
+                    <td>
+                        <a href="{% url 'app:post_detail' post.pk %}">
+                            {{ post.title }}
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %} 

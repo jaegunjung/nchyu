@@ -10,13 +10,13 @@ from app.models import *
 from django.contrib.auth.views import *
 
 # Uncomment the next lines to enable the admin:
-# from django.conf.urls import include
-# from django.contrib import admin
-# admin.autodiscover()
+from django.conf.urls import include
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = [
-    # Examples:
-     
+    url(r'admin/', admin.site.urls),
+    url(r'^app/', include('app.urls', namespace='app')),
     url(r'^$', home, name='home'),
     url(r'^organization', organization, name='organization'),
     url(r'^figures', figures, name='figures'),
