@@ -29,7 +29,7 @@ DATABASES = {
     }
 }
 
-LOGIN_URL = '/login'
+# LOGIN_URL = '/login'
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -75,6 +75,9 @@ STATIC_ROOT = path.join(PROJECT_ROOT, 'static').replace('\\', '/')
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
+
+# OTHER URL
+LOGIN_REDIRECT_URL = ''
 
 # Additional locations of static files
 STATICFILES_DIRS = (
