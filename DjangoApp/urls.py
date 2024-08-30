@@ -24,7 +24,6 @@ urlpatterns = [
     url(r'^yearend', yearend, name='yearend'),
     url(r'^organization', organization, name='organization'),
     url(r'^figures', figures, name='figures'),
-    url(r'^g_photos', g_photos, name='g_photos'),
     url(r'^g_videos', g_videos, name='g_videos'),
     url(r'^contact', contact, name='contact'),
     url(r'^events', events, name='events'),
