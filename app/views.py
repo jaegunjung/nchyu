@@ -77,6 +77,18 @@ def mentors(request):
         })
     )
 
+def yearend(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/yearend.html',
+        context_instance = RequestContext(request,
+        {
+            'year':datetime.now().year,
+        })
+    )
+
 def organization(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
@@ -166,5 +178,8 @@ def post_list(request):
 """
 
 post_list = ListView.as_view(model=Post)
+print('post_list')
+print(post_list)
+
 
 post_detail = DetailView.as_view(model=Post)
