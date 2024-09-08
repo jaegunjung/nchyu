@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^mentor', mentors, name='mentor'),
     url(r'^yearend', yearend, name='yearend'),
+    url(r'^golf', golf, name='golf'),
     url(r'^organization', organization, name='organization'),
     url(r'^figures', figures, name='figures'),
     url(r'^g_videos', g_videos, name='g_videos'),
