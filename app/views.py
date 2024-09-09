@@ -101,6 +101,18 @@ def golf(request):
         })
     )
 
+def meet(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/meet.html',
+        context_instance = RequestContext(request,
+        {
+            'year':datetime.now().year,
+        })
+    )
+
 def organization(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
