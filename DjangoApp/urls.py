@@ -28,7 +28,6 @@ urlpatterns = [
     url(r'^figures', figures, name='figures'),
     url(r'^g_videos', g_videos, name='g_videos'),
     url(r'^contact', contact, name='contact'),
-    url(r'^events', events, name='events'),
     url(r'^googled6ad0f10bcbda8f2', googled6ad0f10bcbda8f2, name='googled6ad0f10bcbda8f2'),
     url(r'^login/$', login, {
             'template_name': 'app/login.html',
