@@ -177,7 +177,10 @@ def post_list(request):
     return render(request, 'app/post_list.html')
 """
 
-post_list = ListView.as_view(model=Post)
+post_list = ListView.as_view(
+    model=Post,
+    ordering=['-created_at'],
+)
 
 
 post_detail = DetailView.as_view(model=Post)
